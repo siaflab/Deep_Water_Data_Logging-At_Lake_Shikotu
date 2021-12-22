@@ -18,7 +18,7 @@ Microphone:Aquarianaudio H1C HYDROPHONE
 High-Resolution 300m Depth/Pressure Sensor：MS5837-30BA  
 Data logger:Arduino Uno Rev3 + Data Logging shield(RTC:DS1307+SD card)  
 Battery:Lithium Ion Mobile Battery 17400mAh  
-Electric Winding Reel:alpha tackle POLARIS iv1000  
+Electric Winding Reel:Alpha Tackle POLARIS iv1000  
 Rod:Ogk Powerwolf 190H PW19H  
   
 CREDIT  
