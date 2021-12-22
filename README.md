@@ -16,7 +16,7 @@ Light:63 consecutive Ring LEDs InputVoltage:9V-30V
 Microphone:Aquarianaudio H1C HYDROPHONE  
 High-Resolution 300m Depth/Pressure Sensor：MS5837-30BA  
 Data logger:Arduino Uno Rev3 + Data Logging shield(RTC:DS1307+SD card)  
-Lithium Ion Battery:Battery17400mAh  
+Lithium Ion Battery:17400mAh  
 
 CREDIT  
 SIAF LAB.  
