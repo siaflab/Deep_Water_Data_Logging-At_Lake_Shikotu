@@ -8,7 +8,7 @@ It is data of unmanned deep-water probe in the lake Shikotu by the Deep water pr
   
 # SPEC of a Deep Water Probe
 <img src="https://github.com/siaflab/Deep_Water_Data_Logging-Lake_Shikotu/blob/main/Probe.png" alt="
-Depth of reach to under water in 2021.07.10" title="Depth of reach to under water in 2021.07.10">  
+DIY Probe for Deep Water" title="DIY Probe for Deep Water">  
   
 Enclosure:4 inch cast acrylic tube (298mm)  
 Cammera:Campark X40 Action Camera  
