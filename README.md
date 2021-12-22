@@ -7,7 +7,7 @@ It is data of unmanned deep-water probe in the lake Shikotu by the Deep water pr
 2017.09.28  
   
 # SPEC of a Deep Water Probe
-<img src="https://github.com/siaflab/Deep_Water_Data_Logging-Lake_Shikotu/blob/main/Probe.png" alt="
+<img src="https://github.com/siaflab/Deep_Water_Data_Logging-At_Lake_Shikotu/blob/main/probe.png" alt="
 DIY Probe for Deep Water" title="DIY Probe for Deep Water">  
   
 Enclosure:4 inch cast acrylic tube (298mm)  
