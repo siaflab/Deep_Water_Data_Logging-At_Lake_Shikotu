@@ -1,6 +1,6 @@
 # Deep_Water_Data_Logging-At_Lake_Shikotu
 <img src="https://github.com/siaflab/Deep_Water_Data_Logging-Lake_Shikotu/blob/main/thumbnail_deep_water.png" alt="thumbnail_deep_water" title="thumbnail_deep_water">  
-There are log of unmanned deep-water probe in the lake Shikotu.
+These are logs obtained by an unmanned deep-water probe in the lake Shikotu.
   
 2021.07.10  
 2021.08.24  
