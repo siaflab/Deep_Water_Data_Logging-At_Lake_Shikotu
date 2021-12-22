@@ -15,8 +15,8 @@ Total Weight:1050g with Balance Weight
 Cammera:Campark X40 Action Camera  
 Light:63 consecutive Ring LEDs InputVoltage:9V-30V  
 Microphone:Aquarianaudio H1C HYDROPHONE  
-High-Resolution 300m Depth/Pressure Sensor：MS5837-30BA  
 Data logger:Arduino Uno Rev3 + Data Logging shield(RTC:DS1307+SD card)  
+High-Resolution 300m Depth/Pressure Sensor：MS5837-30BA  
 Battery:Lithium Ion Mobile Battery 17400mAh  
 Electric Winding Reel:Alpha Tackle POLARIS iv1000  
 Rod:Ogk Powerwolf 190H PW19H  
