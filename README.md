@@ -11,7 +11,7 @@ There are log of unmanned deep-water probe in the lake Shikotu.
 DIY Probe for Deep Water" title="DIY Probe for Deep Water">  
   
 Enclosure:4 inch cast acrylic tube (298mm)  
-Total Weight:1050g  
+Total Weight:1050g with Balance Weight  
 Cammera:Campark X40 Action Camera  
 Light:63 consecutive Ring LEDs InputVoltage:9V-30V  
 Microphone:Aquarianaudio H1C HYDROPHONE  
