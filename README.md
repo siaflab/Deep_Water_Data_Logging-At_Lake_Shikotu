@@ -6,7 +6,7 @@ There are log of unmanned deep-water probe in the lake Shikotu.
 2021.08.24  
 2017.09.28  
   
-# Specification of a Deep Water Probe
+# Specification Of A Deep Water Probe
 <img src="https://github.com/siaflab/Deep_Water_Data_Logging-At_Lake_Shikotu/blob/main/probe.png" alt="
 DIY Probe for Deep Water" title="DIY Probe for Deep Water">  
   
