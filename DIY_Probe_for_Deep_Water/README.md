@@ -1,5 +1,5 @@
 #DIY_Probe_for_Deep_Water
-<img src="https://github.com/siaflab/Deep_Water_Data_Logging-Lake_Shikotu/blob/main/DIY_Probe_for_Deep_Water/thumbnail_deep_water.png" alt="thumbnail_deep_water" title="thumbnail_deep_water">  
+<img src="https://github.com/siaflab/Deep_Water_Data_Logging-Lake_Shikotu/blob/main/DIY_Probe_for_Deep_Water/thumbnail.png" alt="thumbnail" title="thumbnail">  
 
 These are logs obtained by an unmanned probe in the lake Shikotu on the following days.
   
