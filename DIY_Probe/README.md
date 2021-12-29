@@ -5,8 +5,7 @@ These are logs obtained by an unmanned deep-water probe in the lake Shikotu on t
 2017.09.28
 
 # Specification Of The Deep Water Probe
-<img src="https://github.com/siaflab/Deep_Water_Data_Logging-At_Lake_Shikotu/blob/main/probe.png" alt="
-DIY Probe for Deep Water" title="DIY Probe for Deep Water">  
+<img src="https://github.com/siaflab/Deep_Water_Data_Logging_At_Lake_Shikotu/blob/main/DIY_Probe/probe.png" title="DIY Probe for Deep Water">  
   
 Enclosure:4 inch cast acrylic tube (298mm)  
 Total Weight:1050g with Balance Weight  
