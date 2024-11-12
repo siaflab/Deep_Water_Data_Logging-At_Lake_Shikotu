@@ -19,7 +19,7 @@ void setup () {
     Serial.println("RTC is not configured");
   }
   // Set Date and Time (Year, DAY, Month, Hour(24h), Minute, Second)
-  rtc.adjust(DateTime(2024, 11, 11, 1, 11, 11)); //Uncomment this line to set Date and Time
+  rtc.adjust(DateTime(2024, 11, 11, 1, 11, 11)); //write the current time on this line
 }
 
 void loop () { // Get Date and Time
