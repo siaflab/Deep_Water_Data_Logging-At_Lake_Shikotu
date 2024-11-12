@@ -1,3 +1,8 @@
+/*
+*Use this program to record the current time on RTC before starting recording. 
+*The Arduino data logger shield comes with a button battery, so you will know the current time until the battery runs out.
+*Log data can be compared by referring to camera time.
+*/
 #include <Wire.h>
 #include "RTClib.h"
 
