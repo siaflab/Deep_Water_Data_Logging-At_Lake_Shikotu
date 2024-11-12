@@ -1,12 +1,6 @@
 #DIY_Probe_for_Deep_Water
 <img src="https://github.com/siaflab/Deep_Water_Data_Logging-Lake_Shikotu/blob/main/DIY_Probe_for_Deep_Water/thumbnail.png" alt="thumbnail" title="thumbnail">  
 
-These are logs obtained by an unmanned probe in the lake Shikotu on the following days.
-  
-2021.07.10  
-2021.08.24  
-2017.09.28
-
 # Specification Of The Deep Water Probe
 <img src="https://github.com/siaflab/Deep_Water_Data_Logging_At_Lake_Shikotu/blob/main/DIY_Probe_for_Deep_Water/probe.png" title="DIY Probe for Deep Water">  
   
