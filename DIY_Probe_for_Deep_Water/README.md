@@ -1,7 +1,7 @@
 # DIY_Probe_for_Deep_Water
 <img src="https://github.com/siaflab/Deep_Water_Data_Logging-Lake_Shikotu/blob/main/DIY_Probe_for_Deep_Water/thumbnail.png" alt="thumbnail" title="thumbnail">  
 
-We built and tested several prototypes, including a model with the circuit immersed in oil inside a bottle to prevent water intrusion due to water pressure, a small logger made of an acrylic case machined with a laser cutter for cost effectiveness, and a model that uses an underwater drone housing. The model shown below is equipped with lights, an action camera, a hydrophone, and a data logger. And to offset the buoyancy of the payload, we added fishing weights to balance it, and we present a prototype that successfully collected data at depths in excess of 200 meters.
+We built and tested several prototypes, including a model with the circuit immersed in oil inside a bottle to prevent water intrusion due to water pressure, a small logger made of an acrylic case machined with a laser cutter for cost effectiveness, and a model that uses an underwater drone housing. The model shown below is equipped with lights, action cameras, hydrophones, and data loggers. The prototype was also able to collect data at depths of more than 200 meters by adding fishing weights to counterbalance the payload's buoyancy.
 
 # Specification Of The Deep Water Probe
 <img src="https://github.com/siaflab/Deep_Water_Data_Logging_At_Lake_Shikotu/blob/main/DIY_Probe_for_Deep_Water/probe.png" title="DIY Probe for Deep Water">  
