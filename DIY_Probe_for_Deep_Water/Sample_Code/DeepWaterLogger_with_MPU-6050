@@ -1,0 +1,189 @@
+#include <SPI.h>
+#include <SD.h>
+const int chipSelect = 10;
+
+// Date and time functions using a DS1307 RTC connected via I2C and Wire lib
+#include "RTClib.h"
+RTC_DS1307 rtc;
+String Filename;
+
+// Blue Robotics MS5837
+#include <Wire.h>
+#include "MS5837.h"
+MS5837 sensor;
+
+// MPU-6050のアドレス、レジスタ設定値
+float acc_x, acc_y, acc_z, gyro_x, gyro_y, gyro_z;
+#define MPU6050_WHO_AM_I     0x75  // Read Only
+#define MPU6050_PWR_MGMT_1   0x6B  // Read and Write
+#define MPU_ADDRESS  0x68
+
+//スピーカーピン デジタル8番ピン
+const int speakerPin = 8;
+
+int cnt;
+
+void setup () {
+    pinMode(LED_BUILTIN, OUTPUT);
+
+    tone(speakerPin,262,200);//ド
+    delay(200);
+    tone(speakerPin,294,200);//レ
+    delay(200);
+    tone(speakerPin,330,250);//ミ
+    delay(1000);
+    
+  Serial.begin(57600);
+  
+#ifndef ESP8266
+  while (!Serial); // wait for serial port to connect. Needed for native USB
+#endif
+
+  if (! rtc.begin()) {
+    Serial.println("Couldn't find RTC");
+    Serial.flush();
+    abort();
+  }  
+    DateTime time = rtc.now();
+    //Full Timestamp
+    //Filename = String(time.timestamp(DateTime::TIMESTAMP_FULL));
+    Filename = String(time.timestamp(DateTime::TIMESTAMP_DATE));
+    Filename.replace("-","");  Filename.replace(":",""); 
+    Filename += ".txt";
+    Serial.println(Filename);
+
+    // Blue Robotics MS5837
+    Wire.begin();
+    // Initialize pressure sensor
+    // Returns true if initialization was successful
+    // We can't continue with the rest of the program unless we can initialize the sensor
+    while (!sensor.init()) {
+      Serial.println("Init failed!");
+      Serial.println("Are SDA/SCL connected correctly?");
+      Serial.println("Blue Robotics Bar30: White=SDA, Green=SCL");
+      Serial.println("\n\n\n");
+      delay(5000);
+    }
+  
+    // .init sets the sensor model for us but we can override it if required.
+    // Uncomment the next line to force the sensor model to the MS5837_30BA.
+    sensor.setModel(MS5837::MS5837_30BA);
+  
+    sensor.setFluidDensity(997); // kg/m^3 (freshwater, 1029 for seawater)
+
+  // ジャイロ初回の読み出し
+  Wire.beginTransmission(MPU_ADDRESS);
+  Wire.write(MPU6050_WHO_AM_I);  //MPU6050_PWR_MGMT_1
+  Wire.write(0x00);
+  Wire.endTransmission();
+
+  // ジャイロ動作モードの読み出し
+  Wire.beginTransmission(MPU_ADDRESS);
+  Wire.write(MPU6050_PWR_MGMT_1);  //MPU6050_PWR_MGMT_1レジスタの設定
+  Wire.write(0x00);
+  Wire.endTransmission();
+
+  while (!Serial) {
+    ; // wait for serial port to connect. Needed for native USB port only
+  }
+  Serial.print("Initializing SD card...");
+  // see if the card is present and can be initialized:
+  if (!SD.begin(chipSelect)) {
+    Serial.println("Card failed, or not present");
+    // don't do anything more:
+    while (1);
+  }
+  Serial.println("card initialized.");
+
+    File dataFile = SD.open(Filename, FILE_WRITE);   
+    String Header = "Timestamp,Pressure(mbar),Temperature(deg C),Depth(m),Altitude( m above mean sea level),accX(g),accY,accZ,gyroX(degrees per sec),gyroY,gyroZ";
+    dataFile.println(Header);
+    Serial.println(Header);
+    dataFile.close();
+
+    tone(speakerPin,330,80);//ミ
+    delay(80);
+    tone(speakerPin,0,40);//ミ
+    delay(40);
+    tone(speakerPin,330,80);//ミ
+    delay(80);
+}
+
+void loop () {
+  digitalWrite(LED_BUILTIN, HIGH); 
+
+  // open the file. note that only one file can be open at a time,
+  // so you have to close this one before opening another.
+  // ファイル名は８文字まで
+  File dataFile = SD.open(Filename, FILE_WRITE);
+  
+  // if the file is available, write to it:
+  if (dataFile) {
+    String dataString = ""; 
+    DateTime time = rtc.now();
+    //Full Timestamp
+    dataString = String(time.timestamp(DateTime::TIMESTAMP_FULL))+",";
+
+    sensor.read();
+    MPU6050();
+    
+    dataString += String(sensor.pressure()) + ",";
+    dataString += String(sensor.temperature()) + ",";
+    dataString += String(sensor.depth()) + ",";
+    dataString += String(sensor.altitude()) + ",";
+    dataString += String(acc_x) + ",";
+    dataString += String(acc_y) + ",";
+    dataString += String(acc_z) + ",";
+    dataString += String(gyro_x) + ",";
+    dataString += String(gyro_y) + ",";
+    dataString += String(gyro_z) + ",";
+    dataString += String(cnt);
+    // print to the serial port too:
+    dataFile.println(dataString);
+    dataFile.close();
+    Serial.println(dataString);
+    cnt++;
+  }
+  // if the file isn't open, pop up an error:
+  else {
+    Serial.println("error opening datalog.txt");
+  }
+    delay(100); 
+    digitalWrite(LED_BUILTIN, LOW); 
+    delay(840);
+}
+
+void MPU6050(){
+  int16_t axRaw, ayRaw, azRaw, gxRaw, gyRaw, gzRaw, Temperature;
+  Wire.beginTransmission(0x68);
+  Wire.write(0x3B);
+  Wire.endTransmission(false);
+  Wire.requestFrom(0x68, 14, true);
+  while (Wire.available() < 14);
+
+  axRaw = Wire.read() << 8 | Wire.read();
+  ayRaw = Wire.read() << 8 | Wire.read();
+  azRaw = Wire.read() << 8 | Wire.read();
+  Temperature = Wire.read() << 8 | Wire.read();
+  gxRaw = Wire.read() << 8 | Wire.read();
+  gyRaw = Wire.read() << 8 | Wire.read();
+  gzRaw = Wire.read() << 8 | Wire.read();
+
+  // 加速度値を分解能で割って加速度(G)に変換する
+  acc_x = axRaw / 16384.0;  //FS_SEL_0 16,384 LSB / g
+  acc_y = ayRaw / 16384.0;
+  acc_z = azRaw / 16384.0;
+
+  // 角速度値を分解能で割って角速度(degrees per sec)に変換する
+  gyro_x = gxRaw / 131.0;//FS_SEL_0 131 LSB / (°/s)
+  gyro_y = gyRaw / 131.0;
+  gyro_z = gzRaw / 131.0;
+
+//  Serial.print(acc_x);  Serial.print(",");
+//  Serial.print(acc_y);  Serial.print(",");
+//  Serial.print(acc_z);  Serial.print(",");
+//  Serial.print(gyro_x); Serial.print(",");
+//  Serial.print(gyro_y); Serial.print(",");
+//  Serial.print(gyro_z); Serial.println("");
+
+}
