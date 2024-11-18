@@ -6,7 +6,7 @@
 ②The piezoelectric buzzer connected to pin 8 of Arduino Uno.
 
 ③This is a logic level conversion module for communicating between Arduino's 5V and 3.3V sensors via I2C.
-Pressure Sensor MS5837-30BA and gyro sensor MPU-6050 are connected.
+Pressure sensor MS5837-30BA and gyro sensor MPU-6050 are connected to the 3.3V side.
 
 ④This is a 6 axis gyro sensor MPU-6050 for recording the attitude of the payload.
 
