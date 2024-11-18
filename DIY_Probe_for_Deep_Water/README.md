@@ -13,7 +13,7 @@ Light:63 consecutive Ring LEDs InputVoltage:9V-30V
 Microphone:Aquarianaudio H1C HYDROPHONE  
 Data logger:Arduino Uno Rev3 + Data Logging shield(RTC:DS1307+SD card)  
   Data logging shields for Arduino with compatible circuits are sold by various companies. 
-  We use a model called the XD-204 Data logging shield.
+  We use a model called the XD-204 Data logging shield.  
 High-Resolution 300m Depth/Pressure Sensor：MS5837-30BA  
 Battery:Lithium Ion Mobile Battery 17400mAh  
 Electric Winding Reel:Alpha Tackle POLARIS iv1000  
