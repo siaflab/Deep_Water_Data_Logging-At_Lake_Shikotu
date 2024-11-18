@@ -6,7 +6,7 @@ We built and tested several prototypes, including a model with the circuit immer
 # Specification Of The Deep Water Probe
 <img src="https://github.com/siaflab/Deep_Water_Data_Logging_At_Lake_Shikotu/blob/main/DIY_Probe_for_Deep_Water/probe.png" title="DIY Probe for Deep Water">  
   
-Enclosure:4 inch cast acrylic tube (298mm)  > It has been updated to the same size aluminum version at 2024.
+Enclosure:4 inch cast acrylic tube (298mm)  > It has been updated to the same size aluminum version at 2024.  
 Total Weight:1050g with Balance Weight  
 Cammera:Campark X40 Action Camera  
 Light:63 consecutive Ring LEDs InputVoltage:9V-30V  
