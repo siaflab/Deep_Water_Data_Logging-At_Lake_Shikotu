@@ -2,6 +2,7 @@
 <img width="400" src="https://github.com/siaflab/Deep_Water_Data_Logging_At_Lake_Shikotu/blob/main/DIY_Probe_for_Deep_Water/Sample_Code/DataLoggerShield.png" alt="DataLoggerShield" title="DataLoggerShield">  
 
 New components added at locations 1 through 5 on the Data Logger Shield.
+
 ①This 4 pin connects to I2C of Pressure Sensor MS5837-30BA.
 
 ②The piezoelectric buzzer connected to pin 8 of Arduino Uno.
