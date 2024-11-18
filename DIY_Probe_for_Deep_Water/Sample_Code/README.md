@@ -1,4 +1,4 @@
-<img src="https://github.com/siaflab/Deep_Water_Data_Logging_At_Lake_Shikotu/blob/main/DIY_Probe_for_Deep_Water/Sample_Code/DataLoggerShield.png" alt="DataLoggerShield" title="DataLoggerShield">  
+<img src="https://github.com/siaflab/Deep_Water_Data_Logging_At_Lake_Shikotu/blob/main/DIY_Probe_for_Deep_Water/Sample_Code/DataLoggerShield.png" alt="DataLoggerShield" title="DataLoggerShield"　width="400">  
 
 ①This connector connects to I2C of Pressure Sensor MS5837-30BA.
 
