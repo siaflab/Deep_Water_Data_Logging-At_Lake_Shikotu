@@ -12,7 +12,7 @@ Pressure sensor MS5837-30BA and gyro sensor MPU-6050 are connected to the 3.3V s
 
 ④This is a 6 axis gyro sensor MPU-6050 for recording the attitude of the payload.
 
-⑤The 2pin connector prepared to send the PWM signal from the 8-pin with a buzzer,
+⑤The 2 pin connector prepared to send the PWM signal from the 8-pin with a buzzer,
  and at the same time send a start signal to the external microphone terminal of the action camera. 
 We use a 10μF capacitor and two 100K ohm as a simple voltage divider circuit next to the buzzer to match the level of the mini pin.
 
