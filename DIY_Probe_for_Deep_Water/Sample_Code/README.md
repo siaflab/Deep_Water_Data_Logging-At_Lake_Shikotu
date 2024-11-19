@@ -21,8 +21,8 @@ We use a 10μF capacitor and two 100K ohm as a simple voltage divider circuit ne
 * [RTC_Setup.ino](https://github.com/siaflab/Deep_Water_Data_Logging_At_Lake_Shikotu/blob/main/DIY_Probe_for_Deep_Water/Sample_Code/RTC_Setup.ino)  
 Use this program to record the current time on RTC before starting recording. 
 
-* [DeepWaterLogger_sample.ino](https://github.com/siaflab/Deep_Water_Data_Logging_At_Lake_Shikotu/blob/main/DIY_Probe_for_Deep_Water/Sample_Code/DeepWaterLogger_sample.ino)
-  This is a program that uses an Arduino data logger shield to record time stamps, water temperature, and water pressure on an SD card in CSV format.
+* [DeepWaterLogger_sample.ino](https://github.com/siaflab/Deep_Water_Data_Logging_At_Lake_Shikotu/blob/main/DIY_Probe_for_Deep_Water/Sample_Code/DeepWaterLogger_sample.ino)  
+This is a program that uses an Arduino data logger shield to record time stamps, water temperature, and water pressure on an SD card in CSV format.
 
 * [DeepWaterLogger_with_MPU-6050](https://github.com/siaflab/Deep_Water_Data_Logging_At_Lake_Shikotu/blob/main/DIY_Probe_for_Deep_Water/Sample_Code/DeepWaterLogger_with_MPU-6050)  
 It is used to check the momentum with a 6-axis gyro sensor.
