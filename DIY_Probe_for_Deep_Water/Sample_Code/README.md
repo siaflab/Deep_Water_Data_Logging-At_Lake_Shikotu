@@ -18,7 +18,7 @@ We use a 10μF capacitor and two 100K ohm as a simple voltage divider circuit ne
 
 <img width="400" src="https://github.com/siaflab/Deep_Water_Data_Logging_At_Lake_Shikotu/blob/main/DIY_Probe_for_Deep_Water/Sample_Code/buzzer.png" alt="buzzer_sch" title="buzzer_sch">  
 
-* [RTC_Setup.ino](https://github.com/siaflab/Deep_Water_Data_Logging_At_Lake_Shikotu/blob/main/DIY_Probe_for_Deep_Water/Sample_Code/RTC_Setup.ino)　　
+* [RTC_Setup.ino](https://github.com/siaflab/Deep_Water_Data_Logging_At_Lake_Shikotu/blob/main/DIY_Probe_for_Deep_Water/Sample_Code/RTC_Setup.ino)  
 Use this program to record the current time on RTC before starting recording. 
 
 * [DeepWaterLogger_sample.ino](https://github.com/siaflab/Deep_Water_Data_Logging_At_Lake_Shikotu/blob/main/DIY_Probe_for_Deep_Water/Sample_Code/DeepWaterLogger_sample.ino)
