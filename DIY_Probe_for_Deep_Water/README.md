@@ -20,7 +20,7 @@ We built and tested several prototypes, including a model with the circuit immer
 - Electric Winding Reel:Alpha Tackle POLARIS iv1000  
 - Rod:Ogk Powerwolf 190H PW19H  
 
-* [sample code for Data Logger shield](https://github.com/siaflab/Deep_Water_Data_Logging_At_Lake_Shikotu/tree/main/DIY_Probe_for_Deep_Water/Sample_Code))
+* [sample code for Data Logger shield](https://github.com/siaflab/Deep_Water_Data_Logging_At_Lake_Shikotu/tree/main/DIY_Probe_for_Deep_Water/Sample_Code)
   
 CREDIT  
 SIAF LAB.  
